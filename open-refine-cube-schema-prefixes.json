@@ -1,200 +1,112 @@
 [
-
   {
-
     "op": "rdf-extension/save-rdf-schema",
-
     "description": "Save RDF schema skeleton",
-
     "schema": {
-
-      "baseUri": "http://www.opengovintelligence.eu/data/example/”,
-
+      "baseUri": "test",
       "prefixes": [
-
         {
-
-          "name": "sdmx-measure",
-
-          "uri": "http://purl.org/linked-data/sdmx/2009/measure#"
-
-        },
-
-        {
-
-          "name": "prov",
-
-          "uri": "http://www.w3.org/ns/prov#"
-
-        },
-
-        {
-
-          "name": "interval",
-
-          "uri": "http://reference.data.gov.uk/def/intervals/"
-
-        },
-
-        {
-
-          "name": "prop",
-
-          "uri": "http://data.gmdsp.org.uk/data/example/stats/prop/"
-
-        },
-
-        {
-
-          "name": "sdmx-attribute",
-
-          "uri": "http://purl.org/linked-data/sdmx/2009/attribute#"
-
-        },
-
-        {
-
-          "name": "void",
-
-          "uri": "http://rdfs.org/ns/void#"
-
-        },
-
-        {
-
-          "name": "sdmx-concept",
-
-          "uri": "http://purl.org/linked-data/sdmx/2009/concept#"
-
-        },
-
-        {
-
-          "name": "org",
-
-          "uri": "http://www.w3.org/ns/org#"
-
-        },
-
-        {
-
-          "name": "qb",
-
-          "uri": "http://purl.org/linked-data/cube#"
-
-        },
-
-        {
-
-          "name": "sdmx-code",
-
-          "uri": "http://purl.org/linked-data/sdmx/2009/code#"
-
-        },
-
-        {
-
-          "name": "dcterms",
-
-          "uri": "http://purl.org/dc/terms/"
-
-        },
-
-        {
-
-          "name": "dccs",
-
-          "uri": "http://data.gmdsp.org.uk/data/example/stats/dccs/"
-
-        },
-
-        {
-
-          "name": "rdfs",
-
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-
-        },
-
-        {
-
-          "name": "owl",
-
-          "uri": "http://www.w3.org/2002/07/owl#"
-
-        },
-
-        {
-
-          "name": "xsd",
-
-          "uri": "http://www.w3.org/2001/XMLSchema#"
-
-        },
-
-        {
-
-          "name": "sdmx-metadata",
-
-          "uri": "http://purl.org/linked-data/sdmx/2009/metadata#"
-
-        },
-
-        {
-
-          "name": "rdf",
-
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-
-        },
-
-        {
-
-          "name": "scovo",
-
-          "uri": "http://purl.org/NET/scovo#"
-
-        },
-
-        {
-
-          "name": "admingeo",
-
-          "uri": "http://data.ordnancesurvey.co.uk/ontology/admingeo/"
-
-        },
-
-        {
-
-          "name": "skos",
-
-          "uri": "http://www.w3.org/2004/02/skos/core#"
-
-        },
-
-        {
-
-          "name": "ds",
-
-          "uri": "http://data.gmdsp.org.uk/data/example/stats/dataset/"
-
-        },
-
-        {
-
-          "name": "sdmx-dimension",
-
-          "uri": "http://purl.org/linked-data/sdmx/2009/dimension#"
-
-        },
-
-        {
-
           "name": "sdmx-subject",
-
           "uri": "http://purl.org/linked-data/sdmx/2009/subject#"
-
+        },
+        {
+          "name": "dccs",
+          "uri": "http://data.gmdsp.org.uk/data/example/stats/dccs/"
+        },
+        {
+          "name": "sdmx-metadata",
+          "uri": "http://purl.org/linked-data/sdmx/2009/metadata#"
+        },
+        {
+          "name": "void",
+          "uri": "http://rdfs.org/ns/void#"
+        },
+        {
+          "name": "org",
+          "uri": "http://www.w3.org/ns/org#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "xsd",
+          "uri": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+          "name": "skos",
+          "uri": "http://www.w3.org/2004/02/skos/core#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "ds",
+          "uri": "http://data.gmdsp.org.uk/data/example/stats/dataset/"
+        },
+        {
+          "name": "qb",
+          "uri": "http://purl.org/linked-data/cube#"
+        },
+        {
+          "name": "sdmx-measure",
+          "uri": "http://purl.org/linked-data/sdmx/2009/measure#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "sdmx-code",
+          "uri": "http://purl.org/linked-data/sdmx/2009/code#"
+        },
+        {
+          "name": "prop",
+          "uri": "http://data.gmdsp.org.uk/data/example/stats/prop/"
+        },
+        {
+          "name": "sdmx-concept",
+          "uri": "http://purl.org/linked-data/sdmx/2009/concept#"
+        },
+        {
+          "name": "dcterms",
+          "uri": "http://purl.org/dc/terms/"
+        },
+        {
+          "name": "interval",
+          "uri": "http://reference.data.gov.uk/def/intervals/"
+        },
+        {
+          "name": "scovo",
+          "uri": "http://purl.org/NET/scovo#"
+        },
+        {
+          "name": "sdmx-attribute",
+          "uri": "http://purl.org/linked-data/sdmx/2009/attribute#"
+        },
+        {
+          "name": "prov",
+          "uri": "http://www.w3.org/ns/prov#"
+        },
+        {
+          "name": "admingeo",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/admingeo/"
+        },
+        {
+          "name": "sdmx-dimension",
+          "uri": "http://purl.org/linked-data/sdmx/2009/dimension#"
         }
-
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": []
+        }
       ]
-}}]
+    }
+  }
+]
