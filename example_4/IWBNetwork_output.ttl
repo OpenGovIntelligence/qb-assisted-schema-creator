@@ -1,0 +1,104 @@
+@prefix dccs: <http://data.gmdsp.org.uk/data/example/stats/dccs/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ds: <http://data.gmdsp.org.uk/data/example/stats/dataset/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prop: <http://data.gmdsp.org.uk/data/example/stats/prop/> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix admingeo: <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-subject: <http://purl.org/linked-data/sdmx/2009/subject#> .
+@prefix sdmx-metadata: <http://purl.org/linked-data/sdmx/2009/metadata#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+
+
+<http://www.opengovintelligence.eu/time> a qb:DimensionProperty ;
+	rdfs:label "Time"@en ;
+	rdfs:range xsd:time .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> a <http://www.opengovintelligence.eu/http%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23+DataStructureDefinition> .
+
+_:node1blbd72sdx1 qb:dimension <http://www.opengovintelligence.eu/latitude> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1blbd72sdx1 .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> a qb:DataSet ;
+	rdfs:label "Irish National Tide Gauge Network"@en ;
+	rdfs:comment "The Irish National Tide Gauge Network is an on-going development involving the Marine Institute and a number of organisations in the public and private sectors to develop a permanent tidal monitoring infrastructure, ultimately consisting of between 35 and 40 stations."@en ;
+	dct:description "https://erddap.marine.ie/erddap/info/IrishNationalTideGaugeNetwork/index.html"@en .
+
+<http://www.opengovintelligence.eu/latitude> a qb:DimensionProperty ;
+	rdfs:label "Latitude"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1blbd72sdx2 qb:dimension <http://www.opengovintelligence.eu/longitude> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1blbd72sdx2 .
+
+<http://www.opengovintelligence.eu/longitude> a qb:DimensionProperty ;
+	rdfs:label "Longitude"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1blbd72sdx3 qb:dimension <http://www.opengovintelligence.eu/station_id> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1blbd72sdx3 .
+
+<http://www.opengovintelligence.eu/station_id> a qb:DimensionProperty ;
+	rdfs:label "Station ID"@en ;
+	rdfs:range xsd:string .
+
+_:node1blbd72sdx4 qb:dimension <http://www.opengovintelligence.eu/time> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1blbd72sdx4 .
+
+<http://www.opengovintelligence.eu/altitude> a qb:DimensionProperty ;
+	rdfs:label "Altitude"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1blbd72sdx5 qb:dimension <http://www.opengovintelligence.eu/altitude> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1blbd72sdx5 .
+
+<http://www.opengovintelligence.eu/Water_Level> a qb:MeasureProperty ;
+	rdfs:label "Water Level"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1blbd72sdx6 qb:measure <http://www.opengovintelligence.eu/qcflag> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1blbd72sdx6 .
+
+<http://www.opengovintelligence.eu/Water_Level_LAT> a qb:MeasureProperty ;
+	rdfs:label "Water Level LAT"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1blbd72sdx7 qb:measure <http://www.opengovintelligence.eu/Water_Level> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1blbd72sdx7 .
+
+<http://www.opengovintelligence.eu/Water_Level_OD_Malin> a qb:MeasureProperty ;
+	rdfs:label "Water Level OD Malin"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1blbd72sdx8 qb:measure <http://www.opengovintelligence.eu/Water_Level_LAT> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1blbd72sdx8 .
+
+<http://www.opengovintelligence.eu/qcflag> a qb:MeasureProperty ;
+	rdfs:label "qcflag"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1blbd72sdx9 qb:measure <http://www.opengovintelligence.eu/Water_Level_OD_Malin> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1blbd72sdx9 .

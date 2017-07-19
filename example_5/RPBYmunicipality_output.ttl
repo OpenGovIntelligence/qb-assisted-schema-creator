@@ -1,0 +1,90 @@
+@prefix dccs: <http://data.gmdsp.org.uk/data/example/stats/dccs/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ds: <http://data.gmdsp.org.uk/data/example/stats/dataset/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prop: <http://data.gmdsp.org.uk/data/example/stats/prop/> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix admingeo: <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-subject: <http://purl.org/linked-data/sdmx/2009/subject#> .
+@prefix sdmx-metadata: <http://purl.org/linked-data/sdmx/2009/metadata#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+
+
+<http://www.opengovintelligence.eu/refPeriod> a qb:DimensionProperty , sdmx-dimension:refPeriod ;
+	rdfs:label "Period"@en ;
+	rdfs:range xsd:gYear .
+
+<http://www.opengovintelligence.eu/RPBYmunicipality_dsd> a <http://www.opengovintelligence.eu/http%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23+DataStructureDefinition> .
+
+_:node1bldtma2cx1 qb:dimension <http://www.opengovintelligence.eu/refPeriod> .
+
+<http://www.opengovintelligence.eu/RPBYmunicipality_dsd> qb:component _:node1bldtma2cx1 .
+
+<http://www.opengovintelligence.eu/RPBYmunicipality_ds> a qb:DataSet ;
+	rdfs:label "LT: Resident Population at The Beginning of the Year By Municipality"@en ;
+	dct:publisher <http://dbpedia.org/page/Enterprise_Lithuania> ;
+	qb:structure <http://www.opengovintelligence.eu/RPBYmunicipality_dsd> ;
+	dbpedia-owl:organisation <http://dbpedia.org/page/Enterprise_Lithuania> ;
+	dbpedia-owl:location <http://dbpedia.org/page/Lithuania> .
+
+<http://www.opengovintelligence.eu/country-name> a qb:DimensionProperty , <http://www.w3.org/2006/vcard/ns#country-name> ;
+	rdfs:label "Country"@en ;
+	rdfs:range xsd:string .
+
+_:node1bldtma2cx2 qb:dimension <http://www.opengovintelligence.eu/country-name> .
+
+<http://www.opengovintelligence.eu/RPBYmunicipality_dsd> qb:component _:node1bldtma2cx2 .
+
+<http://www.opengovintelligence.eu/county> a qb:DimensionProperty , <http://www.wikipediaontology.org/infobox/county> ;
+	rdfs:label "County"@en ;
+	rdfs:range xsd:string .
+
+_:node1bldtma2cx3 qb:dimension <http://www.opengovintelligence.eu/county> .
+
+<http://www.opengovintelligence.eu/RPBYmunicipality_dsd> qb:component _:node1bldtma2cx3 .
+
+<http://www.opengovintelligence.eu/municipality> a qb:DimensionProperty , <http://id.dbpedia.org/property/municipality> ;
+	rdfs:label "Municipality"@en ;
+	rdfs:range xsd:string .
+
+_:node1bldtma2cx4 qb:dimension <http://www.opengovintelligence.eu/municipality> .
+
+<http://www.opengovintelligence.eu/RPBYmunicipality_dsd> qb:component _:node1bldtma2cx4 .
+
+<http://www.opengovintelligence.eu/age> a qb:DimensionProperty , <http://statistics.gov.scot/def/dimension/age> ;
+	rdfs:label "Age"@en ;
+	rdfs:range xsd:int .
+
+_:node1bldtma2cx5 qb:dimension <http://www.opengovintelligence.eu/age> .
+
+<http://www.opengovintelligence.eu/RPBYmunicipality_dsd> qb:component _:node1bldtma2cx5 .
+
+<http://www.opengovintelligence.eu/gender> a qb:DimensionProperty , <http://statistics.gov.scot/def/dimension/gender> ;
+	rdfs:label "Gender"@en ;
+	rdfs:range xsd:string .
+
+_:node1bldtma2cx6 qb:dimension <http://www.opengovintelligence.eu/gender> .
+
+<http://www.opengovintelligence.eu/RPBYmunicipality_dsd> qb:component _:node1bldtma2cx6 .
+
+<http://www.opengovintelligence.eu/resident_population_at_the_beginning_of_the_year> a qb:MeasureProperty ;
+	rdfs:label "Resident Population at The Beginning of the Year"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1bldtma2cx7 qb:measure <http://www.opengovintelligence.eu/resident_population_at_the_beginning_of_the_year> .
+
+<http://www.opengovintelligence.eu/RPBYmunicipality_dsd> qb:component _:node1bldtma2cx7 .

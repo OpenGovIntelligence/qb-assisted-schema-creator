@@ -1,0 +1,151 @@
+@prefix dccs: <http://data.gmdsp.org.uk/data/example/stats/dccs/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ds: <http://data.gmdsp.org.uk/data/example/stats/dataset/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prop: <http://data.gmdsp.org.uk/data/example/stats/prop/> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix admingeo: <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-subject: <http://purl.org/linked-data/sdmx/2009/subject#> .
+@prefix sdmx-metadata: <http://purl.org/linked-data/sdmx/2009/metadata#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+
+
+<http://www.opengovintelligence.eu/time> a qb:DimensionProperty , <http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> ;
+	rdfs:label "Time"@en ;
+	rdfs:range xsd:time .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> a <http://www.opengovintelligence.eu/http%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23+DataStructureDefinition> .
+
+_:node1bldi68mlx1 qb:dimension <http://www.opengovintelligence.eu/latitude> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1bldi68mlx1 .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> a qb:DataSet ;
+	rdfs:label "Irish National Tide Gauge Network"@en ;
+	rdfs:comment "The Irish National Tide Gauge Network is an on-going development involving the Marine Institute and a number of organisations in the public and private sectors to develop a permanent tidal monitoring infrastructure, ultimately consisting of between 35 and 40 stations."@en ;
+	dct:description "https://erddap.marine.ie/erddap/info/IrishNationalTideGaugeNetwork/index.html"@en ;
+	dct:publisher <http://dbpedia.org/resource/Marine_Institute_Ireland> ;
+	dct:subject <http://www.eionet.europa.eu/gemet/concept/5797> ;
+	qb:structure <http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> ;
+	dbpedia-owl:organisation <http://dbpedia.org/resource/Marine_Institute_Ireland> ;
+	dbpedia-owl:location <http://dbpedia.org/resource/Galway_Bay> .
+
+<http://www.opengovintelligence.eu/latitude> a qb:DimensionProperty , <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+	rdfs:label "Latitude"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1bldi68mlx2 qb:dimension <http://www.opengovintelligence.eu/longitude> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1bldi68mlx2 .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:publisher <http://dbpedia.org/resource/NUI_Galway> ;
+	dct:subject <http://www.eionet.europa.eu/gemet/concept/12586> ;
+	dbpedia-owl:organisation <http://dbpedia.org/resource/NUI_Galway> ;
+	dbpedia-owl:location <https://www.logainm.ie/xml/1165961> .
+
+<http://www.opengovintelligence.eu/latitude> a <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0600/> .
+
+_:node1bldi68mlx3 qb:dimension <http://www.opengovintelligence.eu/station_id> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1bldi68mlx3 .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/8522> ;
+	dbpedia-owl:organisation <http://dbpedia.org/resource/Department_of_Agriculture%2C_Food_and_the_Marine> ;
+	dbpedia-owl:location <https://www.logainm.ie/xml/100015> .
+
+<http://www.opengovintelligence.eu/longitude> a qb:DimensionProperty , <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+	rdfs:label "Longitude"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1bldi68mlx4 qb:dimension <http://www.opengovintelligence.eu/time> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1bldi68mlx4 .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:subject <http://dbpedia.org/resource/Yacht_club> ;
+	dbpedia-owl:organisation <http://dbpedia.org/resource/Department_of_Communications,_Climate_Action_and_Environment> ;
+	dbpedia-owl:location <http://data.geohive.ie/resource/county/2AE19629145313A3E055000000000001> .
+
+<http://www.opengovintelligence.eu/longitude> a <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0554> .
+
+_:node1bldi68mlx5 qb:dimension <http://www.opengovintelligence.eu/altitude> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1bldi68mlx5 .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:subject <http://dbpedia.org/resource/Sailing> ;
+	dbpedia-owl:organisation <http://www.gbsc.ie/> ;
+	dbpedia-owl:location <http://dbpedia.org/resource/County_Galway> .
+
+<http://www.opengovintelligence.eu/station_id> a qb:DimensionProperty , <http://vocab.nerc.ac.uk/collection/W02/current/005/> ;
+	rdfs:label "Station"@en ;
+	rdfs:range xsd:string .
+
+_:node1bldi68mlx6 qb:measure <http://www.opengovintelligence.eu/qcflag> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1bldi68mlx6 .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/14615> ;
+	dbpedia-owl:organisation <http://www.galwaycitysailingclub.com/> ;
+	dbpedia-owl:location <http://sws.geonames.org/2962152/> .
+
+<http://www.opengovintelligence.eu/altitude> a qb:DimensionProperty , <http://www.w3.org/2003/01/geo/wgs84_pos#alt> ;
+	rdfs:label "Latitude"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1bldi68mlx7 qb:measure <http://www.opengovintelligence.eu/Water_Level> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1bldi68mlx7 .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:subject <http://dbpedia.org/resource/Boating> ;
+	dbpedia-owl:organisation <http://www.rusheenbay.com/> ;
+	dbpedia-owl:location <https://www.logainm.ie/xml/1411139> .
+
+<http://www.opengovintelligence.eu/altitude> a <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0028/> .
+
+_:node1bldi68mlx8 qb:measure <http://www.opengovintelligence.eu/Water_Level_LAT> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1bldi68mlx8 .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/945> ;
+	dbpedia-owl:organisation <http://www.kayakmor.ie/> .
+
+<http://www.opengovintelligence.eu/Water_Level> a qb:MeasureProperty ;
+	rdfs:label "Water Level"@en ;
+	rdfs:range xsd:decimal .
+
+_:node1bldi68mlx9 qb:measure <http://www.opengovintelligence.eu/Water_Level_OD_Malin> .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_dsd> qb:component _:node1bldi68mlx9 .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:subject <http://dbpedia.org/resource/Windsurfing> .
+
+<http://www.opengovintelligence.eu/Water_Level_LAT> a qb:MeasureProperty ;
+	rdfs:label "Water Level LAT"@en ;
+	rdfs:range xsd:decimal .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:subject <http://dbpedia.org/resource/Kayaking> .
+
+<http://www.opengovintelligence.eu/Water_Level_OD_Malin> a qb:MeasureProperty ;
+	rdfs:label "Water Level OD Malin"@en ;
+	rdfs:range xsd:decimal .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/5055> .
+
+<http://www.opengovintelligence.eu/qcflag> a qb:MeasureProperty , <https://www.w3.org/2005/Incubator/ssn/ssnx/ssn#qualityOfObservation> ;
+	rdfs:label "Quality Control Flag"@en ;
+	rdfs:range xsd:int .
+
+<http://www.opengovintelligence.eu/IrishNationalTideGaugeNetwork_ds> dct:subject <http://dbpedia.org/resource/Regatta> , <http://dbpedia.org/resource/Swimming_(sport)> , <http://www.eionet.europa.eu/gemet/concept/5033> .
