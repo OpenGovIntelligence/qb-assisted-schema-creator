@@ -4,6 +4,7 @@ Generic Data Cube Schema Creator
 Overview
 --------
 A generic Open Refine project to model RDF data cubes schema.
+
 the RDF Data Cube Vocabulary: http://www.w3.org/TR/vocab-data-cube/.
 
 
