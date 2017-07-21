@@ -10,7 +10,7 @@ the RDF Data Cube Vocabulary: http://www.w3.org/TR/vocab-data-cube/.
 
 Similar Project
 --------
-https://raw.githubusercontent.com/GMDSP-Linked-Data/GenericStatsCube
+https://github.com/GMDSP-Linked-Data/GenericStatsCube
 
 Contents
 --------
