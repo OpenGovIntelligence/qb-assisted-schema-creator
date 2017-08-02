@@ -4,6 +4,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ds: <http://data.gmdsp.org.uk/data/example/stats/dataset/> .
+@prefix ogi: <http://www.opengovintelligence.eu/pilots#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prop: <http://data.gmdsp.org.uk/data/example/stats/prop/> .
@@ -24,141 +25,155 @@
 @prefix interval: <http://reference.data.gov.uk/def/intervals/> .
 
 
-<http://www.opengovintelligence.eu/buoy_id> a qb:DimensionProperty , <http://www.w3.org/ns/ssn/Device> ;
+ogi:buoy_id a qb:ComponentProperty , qb:DimensionProperty , <http://www.w3.org/ns/ssn/Device> ;
 	rdfs:label "Buoy ID"@en ;
 	rdfs:comment "Sensor measuring observations."@en ;
 	rdfs:range xsd:string .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> a <http://www.opengovintelligence.eu/http%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23+DataStructureDefinition> .
+ogi:IWaveBNetwork_zerocrossing_dsd a qb:DataStructureDefinition .
 
-_:node1bldh4i19x1 qb:dimension <http://www.opengovintelligence.eu/buoy_id> .
+_:node1bmhat75ox1 qb:dimension ogi:buoy_id .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> qb:component _:node1bldh4i19x1 .
+ogi:IWaveBNetwork_zerocrossing_dsd qb:component _:node1bmhat75ox1 .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> a qb:DataSet ;
+ogi:IWaveBNetwork_zerocrossing_ds a qb:DataSet ;
 	rdfs:label "Irish Wave Buoy Network Zero Crossing"@en ;
 	rdfs:comment "Wave data monitoring infrastructure for ocean energy research and development."@en ;
 	dct:description "http://www.isde.ie/#/55eb27e0-2fc3-4dab-9963-a99d12402a9e"@en ;
 	dct:publisher <http://dbpedia.org/resource/Marine_Institute_Ireland> ;
 	dct:subject <http://www.eionet.europa.eu/gemet/concept/5797> ;
-	qb:structure <http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> ;
+	qb:structure ogi:IWaveBNetwork_zerocrossing_dsd ;
 	dbpedia-owl:organisation <http://dbpedia.org/resource/Marine_Institute_Ireland> ;
 	dbpedia-owl:location <http://dbpedia.org/resource/Atlantic_Ocean> .
 
-<http://www.opengovintelligence.eu/latitude> a qb:DimensionProperty , <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+ogi:buoy_id dbpedia-owl:originalName "buoy_id" .
+
+ogi:latitude a qb:ComponentProperty , qb:DimensionProperty , <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
 	rdfs:label "Latitude"@en ;
 	rdfs:range xsd:decimal .
 
-_:node1bldh4i19x2 qb:dimension <http://www.opengovintelligence.eu/latitude> .
+_:node1bmhat75ox2 qb:dimension ogi:latitude .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> qb:component _:node1bldh4i19x2 .
+ogi:IWaveBNetwork_zerocrossing_dsd qb:component _:node1bmhat75ox2 .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:publisher <http://dbpedia.org/resource/NUI_Galway> ;
+ogi:IWaveBNetwork_zerocrossing_ds dct:publisher <http://dbpedia.org/resource/NUI_Galway> ;
 	dct:subject <http://www.eionet.europa.eu/gemet/concept/12586> ;
 	dbpedia-owl:organisation <http://dbpedia.org/resource/NUI_Galway> ;
 	dbpedia-owl:location <http://dbpedia.org/resource/North_Atlantic_(disambiguation)> .
 
-<http://www.opengovintelligence.eu/latitude> a <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0600/> .
+ogi:time dbpedia-owl:originalName "time" .
 
-_:node1bldh4i19x3 qb:dimension <http://www.opengovintelligence.eu/longitude> .
+ogi:latitude a <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0600/> .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> qb:component _:node1bldh4i19x3 .
+_:node1bmhat75ox3 qb:dimension ogi:longitude .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/2712> ;
+ogi:IWaveBNetwork_zerocrossing_dsd qb:component _:node1bmhat75ox3 .
+
+ogi:IWaveBNetwork_zerocrossing_ds dct:subject <http://www.eionet.europa.eu/gemet/concept/2712> ;
 	dbpedia-owl:organisation <http://dbpedia.org/resource/Department_of_Agriculture%2C_Food_and_the_Marine> ;
 	dbpedia-owl:location <http://www.eionet.europa.eu/gemet/concept/5694> .
 
-<http://www.opengovintelligence.eu/longitude> a qb:DimensionProperty , <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+ogi:latitude dbpedia-owl:originalName "latitude" .
+
+ogi:longitude a qb:ComponentProperty , qb:DimensionProperty , <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
 	rdfs:label "Longitude"@en ;
 	rdfs:range xsd:decimal .
 
-_:node1bldh4i19x4 qb:dimension <http://www.opengovintelligence.eu/station_id> .
+_:node1bmhat75ox4 qb:dimension ogi:station_id .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> qb:component _:node1bldh4i19x4 .
+ogi:IWaveBNetwork_zerocrossing_dsd qb:component _:node1bmhat75ox4 .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/5668> ;
+ogi:IWaveBNetwork_zerocrossing_ds dct:subject <http://www.eionet.europa.eu/gemet/concept/5668> ;
 	dbpedia-owl:organisation <http://dbpedia.org/resource/Department_of_Communications,_Climate_Action_and_Environment> ;
 	dbpedia-owl:location <http://sws.geonames.org/3411923/> .
 
-<http://www.opengovintelligence.eu/longitude> a <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0554> .
+ogi:longitude dbpedia-owl:originalName "longitude" ;
+	a <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0554> .
 
-_:node1bldh4i19x5 qb:dimension <http://www.opengovintelligence.eu/time> .
+_:node1bmhat75ox5 qb:dimension ogi:time .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> qb:component _:node1bldh4i19x5 .
+ogi:IWaveBNetwork_zerocrossing_dsd qb:component _:node1bmhat75ox5 .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/5677> ;
+ogi:IWaveBNetwork_zerocrossing_ds dct:subject <http://www.eionet.europa.eu/gemet/concept/5677> ;
 	dbpedia-owl:organisation <http://iweda.ie/> ;
 	dbpedia-owl:location <http://sws.geonames.org/6295630/> .
 
-<http://www.opengovintelligence.eu/station_id> a qb:DimensionProperty , <http://vocab.nerc.ac.uk/collection/W02/current/005/> ;
+ogi:station_id dbpedia-owl:originalName "station_id" ;
+	a qb:ComponentProperty , qb:DimensionProperty , <http://vocab.nerc.ac.uk/collection/W02/current/005/> ;
 	rdfs:label "Station"@en ;
 	rdfs:range xsd:string .
 
-_:node1bldh4i19x6 qb:measure <http://www.opengovintelligence.eu/Hmax> .
+_:node1bmhat75ox6 qb:measure ogi:Hmax .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> qb:component _:node1bldh4i19x6 .
+ogi:IWaveBNetwork_zerocrossing_dsd qb:component _:node1bmhat75ox6 .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/7107> ;
+ogi:IWaveBNetwork_zerocrossing_ds dct:subject <http://www.eionet.europa.eu/gemet/concept/7107> ;
 	dbpedia-owl:organisation <http://www.mria.ie/> ;
 	dbpedia-owl:location <http://vocab.nerc.ac.uk/collection/C16/current/200/> .
 
-<http://www.opengovintelligence.eu/Hmax> a qb:MeasureProperty ;
+ogi:Hmax dbpedia-owl:originalName "Hmax" ;
+	a qb:ComponentProperty , qb:MeasureProperty ;
 	rdfs:label "H Max"@en ;
 	rdfs:range xsd:decimal .
 
-_:node1bldh4i19x7 qb:measure <http://www.opengovintelligence.eu/HmaxPeriod> .
+_:node1bmhat75ox7 qb:measure ogi:HmaxPeriod .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> qb:component _:node1bldh4i19x7 .
+ogi:IWaveBNetwork_zerocrossing_dsd qb:component _:node1bmhat75ox7 .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:subject <http://dbpedia.org/resource/Marine_energy> ;
+ogi:IWaveBNetwork_zerocrossing_ds dct:subject <http://dbpedia.org/resource/Marine_energy> ;
 	dbpedia-owl:organisation <http://www.seai.ie/> ;
 	dbpedia-owl:location <http://vocab.nerc.ac.uk/collection/C16/current/23/> .
 
-<http://www.opengovintelligence.eu/HmaxPeriod> a qb:MeasureProperty ;
+ogi:HmaxPeriod dbpedia-owl:originalName "HmaxPeriod" ;
+	a qb:ComponentProperty , qb:MeasureProperty ;
 	rdfs:label "H Max Period"@en ;
 	rdfs:range xsd:decimal .
 
-_:node1bldh4i19x8 qb:measure <http://www.opengovintelligence.eu/Havg> .
+_:node1bmhat75ox8 qb:measure ogi:Havg .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> qb:component _:node1bldh4i19x8 .
+ogi:IWaveBNetwork_zerocrossing_dsd qb:component _:node1bmhat75ox8 .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/9259> ;
+ogi:IWaveBNetwork_zerocrossing_ds dct:subject <http://www.eionet.europa.eu/gemet/concept/9259> ;
 	dbpedia-owl:location <http://vocab.nerc.ac.uk/collection/C16/current/23a/> .
 
-<http://www.opengovintelligence.eu/Havg> a qb:MeasureProperty ;
+ogi:Havg dbpedia-owl:originalName "Havg" ;
+	a qb:ComponentProperty , qb:MeasureProperty ;
 	rdfs:label "H Average"@en ;
 	rdfs:range xsd:decimal .
 
-_:node1bldh4i19x9 qb:measure <http://www.opengovintelligence.eu/Tavg> .
+_:node1bmhat75ox9 qb:measure ogi:Tavg .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> qb:component _:node1bldh4i19x9 .
+ogi:IWaveBNetwork_zerocrossing_dsd qb:component _:node1bmhat75ox9 .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:subject <http://dbpedia.org/resource/Wave_power> ;
+ogi:IWaveBNetwork_zerocrossing_ds dct:subject <http://dbpedia.org/resource/Wave_power> ;
 	dbpedia-owl:location <http://sws.geonames.org/2964178> .
 
-<http://www.opengovintelligence.eu/Tavg> a qb:MeasureProperty ;
+ogi:Tavg dbpedia-owl:originalName "Tavg" ;
+	a qb:ComponentProperty , qb:MeasureProperty ;
 	rdfs:label "T Average"@en ;
 	rdfs:range xsd:decimal .
 
-_:node1bldh4i19x10 qb:measure <http://www.opengovintelligence.eu/qcflag> .
+_:node1bmhat75ox10 qb:measure ogi:qcflag .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_dsd> qb:component _:node1bldh4i19x10 .
+ogi:IWaveBNetwork_zerocrossing_dsd qb:component _:node1bmhat75ox10 .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/2738> ;
+ogi:IWaveBNetwork_zerocrossing_ds dct:subject <http://www.eionet.europa.eu/gemet/concept/2738> ;
 	dbpedia-owl:location <http://dbpedia.org/resource/Galway_Bay> .
 
-<http://www.opengovintelligence.eu/time> a qb:DimensionProperty , <http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> ;
+ogi:qcflag dbpedia-owl:originalName "qcflag" .
+
+ogi:time a qb:ComponentProperty , qb:DimensionProperty , <http://purl.oclc.org/NET/ssnx/ssn#observationResultTime> ;
 	rdfs:label "Time"@en ;
 	rdfs:range xsd:time .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/2718> ;
+ogi:IWaveBNetwork_zerocrossing_ds dct:subject <http://www.eionet.europa.eu/gemet/concept/2718> ;
 	dbpedia-owl:location <https://www.logainm.ie/xml/1165961> .
 
-<http://www.opengovintelligence.eu/qcflag> a qb:MeasureProperty , <https://www.w3.org/2005/Incubator/ssn/ssnx/ssn#qualityOfObservation> ;
+ogi:qcflag a qb:ComponentProperty , qb:MeasureProperty , <https://www.w3.org/2005/Incubator/ssn/ssnx/ssn#qualityOfObservation> ;
 	rdfs:label "Quality Control Flag"@en ;
 	rdfs:range xsd:int .
 
-<http://www.opengovintelligence.eu/IWaveBNetwork_zerocrossing_ds> dct:subject <http://www.eionet.europa.eu/gemet/concept/2601> ;
+ogi:IWaveBNetwork_zerocrossing_ds dct:subject <http://www.eionet.europa.eu/gemet/concept/2601> ;
 	dbpedia-owl:location <https://www.logainm.ie/xml/100015> ;
 	dct:subject <http://www.eionet.europa.eu/gemet/concept/2747> ;
 	dbpedia-owl:location <http://data.geohive.ie/resource/county/2AE19629145313A3E055000000000001> ;

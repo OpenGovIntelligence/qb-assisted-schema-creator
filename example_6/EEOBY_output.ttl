@@ -4,6 +4,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ds: <http://data.gmdsp.org.uk/data/example/stats/dataset/> .
+@prefix ogi: <http://www.opengovintelligence.eu/pilots#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prop: <http://data.gmdsp.org.uk/data/example/stats/prop/> .
@@ -24,59 +25,71 @@
 @prefix interval: <http://reference.data.gov.uk/def/intervals/> .
 
 
-<http://www.opengovintelligence.eu/refPeriod> a qb:DimensionProperty , sdmx-dimension:refPeriod ;
+ogi:refPeriod a qb:ComponentProperty , qb:DimensionProperty , sdmx-dimension:refPeriod ;
 	rdfs:label "Period"@en ;
 	rdfs:range xsd:gYear .
 
-<http://www.opengovintelligence.eu/EEPBY_dsd> a <http://www.opengovintelligence.eu/http%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23+DataStructureDefinition> .
+ogi:EEPBY_dsd a qb:DataStructureDefinition .
 
-_:node1bldug6n0x1 qb:dimension <http://www.opengovintelligence.eu/refPeriod> .
+_:node1bmhbdln7x1 qb:dimension ogi:refPeriod .
 
-<http://www.opengovintelligence.eu/EEPBY_dsd> qb:component _:node1bldug6n0x1 .
+ogi:EEPBY_dsd qb:component _:node1bmhbdln7x1 .
 
-<http://www.opengovintelligence.eu/EEOBY_ds> a qb:DataSet ;
+ogi:EEOBY_ds a qb:DataSet ;
 	rdfs:label "LT: Economic Entities in Operation at the Beginning of the Year"@en ;
 	dct:publisher <http://dbpedia.org/page/Enterprise_Lithuania> ;
-	qb:structure <http://www.opengovintelligence.eu/EEPBY_dsd> ;
+	qb:structure ogi:EEPBY_dsd ;
 	dbpedia-owl:organisation <http://dbpedia.org/page/Enterprise_Lithuania> ;
 	dbpedia-owl:location <http://dbpedia.org/page/Lithuania> .
 
-<http://www.opengovintelligence.eu/country-name> a qb:DimensionProperty , <http://www.w3.org/2006/vcard/ns#country-name> ;
+ogi:refPeriod dbpedia-owl:originalName "Time_period" .
+
+ogi:country-name a qb:ComponentProperty , qb:DimensionProperty , <http://www.w3.org/2006/vcard/ns#country-name> ;
 	rdfs:label "Country"@en ;
 	rdfs:range xsd:string .
 
-_:node1bldug6n0x2 qb:dimension <http://www.opengovintelligence.eu/country-name> .
+_:node1bmhbdln7x2 qb:dimension ogi:country-name .
 
-<http://www.opengovintelligence.eu/EEPBY_dsd> qb:component _:node1bldug6n0x2 .
+ogi:EEPBY_dsd qb:component _:node1bmhbdln7x2 .
 
-<http://www.opengovintelligence.eu/county> a qb:DimensionProperty , <http://www.wikipediaontology.org/infobox/county> ;
+ogi:country-name dbpedia-owl:originalName "Country" .
+
+ogi:county a qb:ComponentProperty , qb:DimensionProperty , <http://www.wikipediaontology.org/infobox/county> ;
 	rdfs:label "County"@en ;
 	rdfs:range xsd:string .
 
-_:node1bldug6n0x3 qb:dimension <http://www.opengovintelligence.eu/county> .
+_:node1bmhbdln7x3 qb:dimension ogi:county .
 
-<http://www.opengovintelligence.eu/EEPBY_dsd> qb:component _:node1bldug6n0x3 .
+ogi:EEPBY_dsd qb:component _:node1bmhbdln7x3 .
 
-<http://www.opengovintelligence.eu/municipality> a qb:DimensionProperty , <http://id.dbpedia.org/property/municipality> ;
+ogi:county dbpedia-owl:originalName "County" .
+
+ogi:municipality a qb:ComponentProperty , qb:DimensionProperty , <http://id.dbpedia.org/property/municipality> ;
 	rdfs:label "Municipality"@en ;
 	rdfs:range xsd:string .
 
-_:node1bldug6n0x4 qb:dimension <http://www.opengovintelligence.eu/municipality> .
+_:node1bmhbdln7x4 qb:dimension ogi:municipality .
 
-<http://www.opengovintelligence.eu/EEPBY_dsd> qb:component _:node1bldug6n0x4 .
+ogi:EEPBY_dsd qb:component _:node1bmhbdln7x4 .
 
-<http://www.opengovintelligence.eu/employee_number> a qb:DimensionProperty ;
+ogi:municipality dbpedia-owl:originalName "Municipality" .
+
+ogi:employee_number a qb:ComponentProperty , qb:DimensionProperty ;
 	rdfs:label "Emplyees"@en ;
 	rdfs:range xsd:decimal .
 
-_:node1bldug6n0x5 qb:dimension <http://www.opengovintelligence.eu/employee_number> .
+_:node1bmhbdln7x5 qb:dimension ogi:employee_number .
 
-<http://www.opengovintelligence.eu/EEPBY_dsd> qb:component _:node1bldug6n0x5 .
+ogi:EEPBY_dsd qb:component _:node1bmhbdln7x5 .
 
-<http://www.opengovintelligence.eu/economic_entities_in_operation_at_the_beginning_of_the_year> a qb:MeasureProperty ;
+ogi:employee_number dbpedia-owl:originalName "employee_number" .
+
+ogi:economic_entities_in_operation_at_the_beginning_of_the_year a qb:ComponentProperty , qb:MeasureProperty ;
 	rdfs:label "Economic Entities in Operation at the Beginning of the Year"@en ;
 	rdfs:range xsd:decimal .
 
-_:node1bldug6n0x6 qb:measure <http://www.opengovintelligence.eu/economic_entities_in_operation_at_the_beginning_of_the_year> .
+_:node1bmhbdln7x6 qb:measure ogi:economic_entities_in_operation_at_the_beginning_of_the_year .
 
-<http://www.opengovintelligence.eu/EEPBY_dsd> qb:component _:node1bldug6n0x6 .
+ogi:EEPBY_dsd qb:component _:node1bmhbdln7x6 .
+
+ogi:economic_entities_in_operation_at_the_beginning_of_the_year dbpedia-owl:originalName "Economic_entities_in_operation_at_the_beginning_of_the_year_units" .

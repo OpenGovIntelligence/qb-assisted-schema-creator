@@ -4,6 +4,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ds: <http://data.gmdsp.org.uk/data/example/stats/dataset/> .
+@prefix ogi: <http://www.opengovintelligence.eu/pilots#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prop: <http://data.gmdsp.org.uk/data/example/stats/prop/> .
@@ -24,59 +25,70 @@
 @prefix interval: <http://reference.data.gov.uk/def/intervals/> .
 
 
-<http://www.opengovintelligence.eu/refPeriod> a qb:DimensionProperty , sdmx-dimension:refPeriod ;
+ogi:refPeriod a qb:ComponentProperty , qb:DimensionProperty , sdmx-dimension:refPeriod ;
 	rdfs:label "Period"@en ;
 	rdfs:range xsd:gYear .
 
-<http://www.opengovintelligence.eu/AEmonthly_dsd> a <http://www.opengovintelligence.eu/http%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23+DataStructureDefinition> .
+ogi:AEmonthly_dsd a qb:DataStructureDefinition .
 
-_:node1ble04f0nx1 qb:dimension <http://www.opengovintelligence.eu/refPeriod> .
+_:node1bmhbsnhsx1 qb:dimension ogi:refPeriod .
 
-<http://www.opengovintelligence.eu/AEmonthly_dsd> qb:component _:node1ble04f0nx1 .
+ogi:AEmonthly_dsd qb:component _:node1bmhbsnhsx1 .
 
-<http://www.opengovintelligence.eu/AEmonthly_ds> a qb:DataSet ;
+ogi:AEmonthly_ds a qb:DataSet ;
 	rdfs:label "LT:Average Earnings Monthly"@en ;
 	dct:publisher <http://dbpedia.org/page/Enterprise_Lithuania> ;
-	qb:structure <http://www.opengovintelligence.eu/AEmonthly_dsd> ;
+	qb:structure ogi:AEmonthly_dsd ;
 	dbpedia-owl:organisation <http://dbpedia.org/page/Enterprise_Lithuania> ;
 	dbpedia-owl:location <http://dbpedia.org/page/Lithuania> .
 
-<http://www.opengovintelligence.eu/country-name> a qb:DimensionProperty , <http://www.w3.org/2006/vcard/ns#country-name> ;
+ogi:refPeriod dbpedia-owl:originalName "Time_period" .
+
+ogi:country-name a qb:ComponentProperty , qb:DimensionProperty , <http://www.w3.org/2006/vcard/ns#country-name> ;
 	rdfs:label "Country"@en ;
 	rdfs:range xsd:string .
 
-_:node1ble04f0nx2 qb:dimension <http://www.opengovintelligence.eu/country-name> .
+_:node1bmhbsnhsx2 qb:dimension ogi:country-name .
 
-<http://www.opengovintelligence.eu/AEmonthly_dsd> qb:component _:node1ble04f0nx2 .
+ogi:AEmonthly_dsd qb:component _:node1bmhbsnhsx2 .
 
-<http://www.opengovintelligence.eu/county> a qb:DimensionProperty , <http://www.wikipediaontology.org/infobox/county> ;
+ogi:country-name dbpedia-owl:originalName "Country" .
+
+ogi:county a qb:ComponentProperty , qb:DimensionProperty , <http://www.wikipediaontology.org/infobox/county> ;
 	rdfs:label "County"@en ;
 	rdfs:range xsd:string .
 
-_:node1ble04f0nx3 qb:dimension <http://www.opengovintelligence.eu/county> .
+_:node1bmhbsnhsx3 qb:dimension ogi:county .
 
-<http://www.opengovintelligence.eu/AEmonthly_dsd> qb:component _:node1ble04f0nx3 .
+ogi:AEmonthly_dsd qb:component _:node1bmhbsnhsx3 .
 
-<http://www.opengovintelligence.eu/municipality> a qb:DimensionProperty , <http://id.dbpedia.org/property/municipality> ;
+ogi:county dbpedia-owl:originalName "County" .
+
+ogi:municipality a qb:ComponentProperty , qb:DimensionProperty , <http://id.dbpedia.org/property/municipality> ;
 	rdfs:label "Municipality"@en ;
 	rdfs:range xsd:string .
 
-_:node1ble04f0nx4 qb:dimension <http://www.opengovintelligence.eu/municipality> .
+_:node1bmhbsnhsx4 qb:dimension ogi:municipality .
 
-<http://www.opengovintelligence.eu/AEmonthly_dsd> qb:component _:node1ble04f0nx4 .
+ogi:AEmonthly_dsd qb:component _:node1bmhbsnhsx4 .
 
-<http://www.opengovintelligence.eu/average_earnings_monthly> a qb:MeasureProperty ;
+ogi:municipality dbpedia-owl:originalName "Municipality" .
+
+ogi:average_earnings_monthly a qb:ComponentProperty , qb:MeasureProperty ;
 	rdfs:label "Average Earnings Monthly"@en ;
 	rdfs:range xsd:decimal .
 
-_:node1ble04f0nx5 qb:measure <http://www.opengovintelligence.eu/average_earnings_monthly> .
+_:node1bmhbsnhsx5 qb:measure ogi:average_earnings_monthly .
 
-<http://www.opengovintelligence.eu/AEmonthly_dsd> qb:component _:node1ble04f0nx5 .
+ogi:AEmonthly_dsd qb:component _:node1bmhbsnhsx5 .
 
-<http://www.opengovintelligence.eu/type> a qb:DimensionProperty ;
+ogi:type dbpedia-owl:originalName "Type" ;
+	a qb:ComponentProperty , qb:DimensionProperty ;
 	rdfs:label "Earninigs Type"@en ;
 	rdfs:range xsd:string .
 
-_:node1ble04f0nx6 qb:dimension <http://www.opengovintelligence.eu/type> .
+_:node1bmhbsnhsx6 qb:dimension ogi:type .
 
-<http://www.opengovintelligence.eu/AEmonthly_dsd> qb:component _:node1ble04f0nx6 .
+ogi:AEmonthly_dsd qb:component _:node1bmhbsnhsx6 .
+
+ogi:average_earnings_monthly dbpedia-owl:originalName "Average_earnings_monthly_EUR" .
