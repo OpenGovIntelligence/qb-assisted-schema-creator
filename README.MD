@@ -26,7 +26,9 @@ Installation
 1. Download/Open/Run Open Refine (http://openrefine.org/)
 2. Add the RDF Extension to Refine (http://refine.deri.ie/)
 
-** Use latest version => https://github.com/fadmaa/grefine-rdf-extension/releases/tag/v0.9.0
+** Use latest version =>
+ 
+ https://github.com/fadmaa/grefine-rdf-extension/releases/tag/v0.9.0
 
 
 Usage
@@ -43,10 +45,118 @@ Usage
 
 Done !
 
+###follow the screens:
+[1]
+
+![img](screen_samples/1.png)
+
+[2]
+
+![img](screen_samples/2.png)
+
+[3]
+
+![img](screen_samples/3.png)
+
+[4]
+
+![img](screen_samples/4.png)
+
+[5]
+
+![img](screen_samples/5.png)
+
+[6]
+
+![img](screen_samples/s02.png)
+
+[7]
+
+![img](screen_samples/s03.png)
+
+[8]
+
+![img](screen_samples/s3.png)
+
+[9]
+
+![img](screen_samples/s4.png)
+
+[10]
+
+![img](screen_samples/s5.png)
+
+[11]
+
+![img](screen_samples/s6.png)
+
+[12]
+
+![img](screen_samples/s7.png)
+
+[13]
+
+![img](screen_samples/s8.png)
+
+[14]
+
+![img](screen_samples/s9.png)
+
+[15]
+
+![img](screen_samples/s10.png)
+
+[16]
+
+![img](screen_samples/s16.png)
+
+[17]
+
+![img](screen_samples/s17.png)
+
+[18]
+
+![img](screen_samples/s18.png)
+
+[19]
+
+![img](screen_samples/s19.png)
+
+[20]
+
+![img](screen_samples/s20.png)
+
+[21]
+
+![img](screen_samples/s21.png)
+
+[22]
+
+![img](screen_samples/s22.png)
+
+[23]
+
+![img](screen_samples/s23.png)
+
+[24]
+
+![img](screen_samples/s24.png)
+
+[25]
+
+![img](screen_samples/s25.png)
+
+
+
+
+
+
 
 Help
 --------
 Consult example folders for details on how to fill the spreadsheet. 
+
+
 
 
 ---------------------
