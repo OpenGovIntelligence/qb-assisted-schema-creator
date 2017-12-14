@@ -149,16 +149,43 @@ Done !
 
 
 
-
-
-
 Help
 --------
 Consult example folders for details on how to fill the spreadsheet. 
 
 
+Linux installation
+----------
+    $ mkdir openrefine28
+    $cd openrefine28
+    $wget https://github.com/OpenRefine/OpenRefine/releases/download/2.8/openrefine-linux-2.8.tar.gz
+    $tar -xvzf openrefine-linux-2.8.tar.gz
+    
+change port/host
+-------
+    $cd openrefine28/openrefine-2.8
+    $nano refine.ini 
+    change PORT/HOST if neede
 
+    
+install grefine rdf extension
+----------
+    $cd openrefine28
+    $mkdir openrefine-rdf-extension
+    $wget https://github.com/fadmaa/grefine-rdf-extension/releases/download/v0.9.0/orefine-rdf-extension-0.9.zip
+    $unzip  orefine-rdf-extension-0.9.zip
+    $mv  orefine-rdf-extension-0.9 ../openrefine-2.8/webapp/extensions/
+    
+java disply error [only if occured]
+-------
+    $unset DISPLAY
 
+Run openrefine server / with orefine rdf ext
+-----
+    $cd openrefine28/openrefine-2.8
+    $screen -S ogi-open-refine-8007 ./refine
+    
+    
 ---------------------
 Last update: 19th July 2017
 
